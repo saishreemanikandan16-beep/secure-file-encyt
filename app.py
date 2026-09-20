@@ -79,10 +79,11 @@ def initialize_database():
             created_at TEXT NOT NULL
         )
     """)
+     
 
     connection.commit()
     connection.close()
-
+initialize_database()
 
 def log_activity(action, file_name, status):
     connection = get_db()
